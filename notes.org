@@ -1,0 +1,9 @@
+* TODO core product
+** TODO add-recipe page
+*** TODO learn how routing works
+**** [[https://facebook.github.io/react-native/docs/navigation.html][link]]
+*** TODO learn how to store data
+**** Seems simple enough, [[https://facebook.github.io/react-native/docs/asyncstorage.html][link]]
+*** 
+* stretch goals
+** calendar view
