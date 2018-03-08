@@ -22,14 +22,27 @@ const step4 = {
 }
 
 const SpecialRecipe = {
-    name: 'THE GOOD STUFF',
-    startingIngredients: [['Honey', '1 lb'], ['Blackberries', '1 cup']],
-    process: [step1, step2, step3, step4]
+    THEGOODSTUFF: {
+        startingIngredients: [['Honey', '1 lb'], ['Blackberries', '1 cup']],
+        process: [step1, step2, step3, step4]
+    }
+}
+
+const OtherRecipe = {
+    THEOTHERSTUFF: {
+        startingIngredients: [['Honey', '1 lb'], ['Blackberries', '1 cup']],
+        process: [step1, step2, step3, step4]
+    }
 }
 
 const pressHandler = (evt) => {
-    store.setItem('recipes', JSON.stringify([SpecialRecipe]))
-    /* .then(evt.target.title = 'added')*/
+    let JSONED = JSON.stringify(SpecialRecipe)
+    store.mergeItem('recipes', JSONED)
+}
+
+const otherHandler = async (evt) => {
+    let JSONEDED = JSON.stringify(OtherRecipe)
+    store.mergeItem('recipes', JSONEDED)
 }
 
 const NewRecipe = props => {
@@ -42,6 +55,10 @@ const NewRecipe = props => {
                 title="add the good stuff"
                 onPress={pressHandler}
             />
+        <Button
+        title="add the other stuff"
+        onPress={otherHandler}
+        />
         </View>
     )
 }

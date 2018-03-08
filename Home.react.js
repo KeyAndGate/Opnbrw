@@ -1,9 +1,13 @@
 import React from 'react'
-import { Text, View, Button } from 'react-native'
+import { Text, View, Button, AsyncStorage as store} from 'react-native'
 import styles from './Styles.react'
 
 
-const HomeScreen = props => {
+const HomeScreen = ( props ) => {
+    store.getItem('recipes')
+         .then(recipes => {
+             if (!recipes) store.setItem('recipes', JSON.stringify({}))
+         })
     const { navigate } = props.navigation
     return (
         <View style={styles.container}>
