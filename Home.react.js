@@ -9,6 +9,10 @@ const HomeScreen = props => {
         <View style={styles.container}>
             <Text>Home Screen</Text>
             <Button
+                title="Go to Recipes"
+                onPress={() => navigate('Recipes')}
+            />
+            <Button
                 title="Go to NewRecipe"
                 onPress={() => navigate('NewRecipe')}
             />
