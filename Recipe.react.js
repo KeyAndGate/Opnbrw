@@ -4,11 +4,17 @@ import styles from './Styles.react'
 
 const Recipe = props => {
     const name = props.recipe
-    const hon = props.data.startingIngredients[0][0]
+    const start = props.data.startingIngredients
     return (
         <View style={styles.container}>
-            <Text>{name}</Text>
-            <Text>{hon}</Text>
+        <Text>{name}</Text>
+            {
+                Object.keys(start).map(ingredient => (
+                    <View key={`start${ingredient}`}>
+                        <Text>{ingredient + ' ' + start[ingredient]}</Text>
+                    </View>
+                ))
+            }
         </View>
     )
 }

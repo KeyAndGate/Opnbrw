@@ -2,45 +2,45 @@ import React from 'react'
 import { View, Text, Button, AsyncStorage as store } from 'react-native'
 import styles from './Styles.react'
 
-const step1 = {
-    step: 'degas',
-    from: 1,
-    until: 12
-}
 
+const step1 = {
+    name: 'secondary',
+    date: 13
+}
 const step2 = {
-    step: 'secondary',
-    on: 13
+    name: 'coldCrash',
+    date: 14
 }
 const step3 = {
-    step: 'coldCrash',
-    on: 14
+    name: 'bottle',
+    date: 18
 }
-const step4 = {
-    step: 'bottle',
-    on: 18
+const startingIngredients = {
+    Honey: '1 lb',
+    Blackberries: '1 cup'
 }
 
 const SpecialRecipe = {
-    THEGOODSTUFF: {
-        startingIngredients: [['Honey', '1 lb'], ['Blackberries', '1 cup']],
-        process: [step1, step2, step3, step4]
+    'The Good Stuff': {
+        startingIngredients,
+        steps: [step1, step2, step3],
+        recurringSteps: [{ name: 'degas', interval: 1, start: 2, end: 8 }]
     }
 }
 
 const OtherRecipe = {
-    "The Other Stuff": {
+    'The Other Stuff': {
         startingIngredients: [['Honey', '1 lb'], ['Blackberries', '1 cup']],
-        process: [step1, step2, step3, step4]
+        process: [step1, step2, step3]
     }
 }
 
-const pressHandler = (evt) => {
+const pressHandler = () => {
     let JSONED = JSON.stringify(SpecialRecipe)
     store.mergeItem('recipes', JSONED)
 }
 
-const otherHandler = async (evt) => {
+const otherHandler = () => {
     let JSONED = JSON.stringify(OtherRecipe)
     store.mergeItem('recipes', JSONED)
 }
