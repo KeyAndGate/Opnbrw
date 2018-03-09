@@ -30,8 +30,9 @@ const SpecialRecipe = {
 
 const OtherRecipe = {
     'The Other Stuff': {
-        startingIngredients: [['Honey', '1 lb'], ['Blackberries', '1 cup']],
-        process: [step1, step2, step3]
+      startingIngredients,
+      steps: [step1, step2, step3],
+      additions: {Moarhoney: '2 lbs'}
     }
 }
 
