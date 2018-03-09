@@ -9,11 +9,13 @@
     CLOSED: [2018-03-08 Thu 17:54]
 **** Seems simple enough, [[https://facebook.github.io/react-native/docs/asyncstorage.html][link]]
 ** TODO recipe page
-*** TODO info to display [0/4] 
-    - [ ] Name
-    - [ ] Ingredients
-    - [ ] Additions
-    - [ ] Schedule
+*** DONE info to display [5/5] 
+    CLOSED: [2018-03-09 Fri 17:50]
+    - [X] Name
+    - [X] Ingredients
+    - [X] Additions
+    - [X] Schedule, recurrant
+    - [X] Schedule, regular
 *** TODO add to active batches
 *** TODO edit button
 ** TODO recipes page
