@@ -29,7 +29,7 @@ const SpecialRecipe = {
 }
 
 const OtherRecipe = {
-    THEOTHERSTUFF: {
+    "The Other Stuff": {
         startingIngredients: [['Honey', '1 lb'], ['Blackberries', '1 cup']],
         process: [step1, step2, step3, step4]
     }
@@ -41,8 +41,8 @@ const pressHandler = (evt) => {
 }
 
 const otherHandler = async (evt) => {
-    let JSONEDED = JSON.stringify(OtherRecipe)
-    store.mergeItem('recipes', JSONEDED)
+    let JSONED = JSON.stringify(OtherRecipe)
+    store.mergeItem('recipes', JSONED)
 }
 
 const NewRecipe = props => {

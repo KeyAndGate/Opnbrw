@@ -10,18 +10,17 @@ class Recipe extends React.Component {
         this.state = {
             recipes: {}
         }
-        this.pressHandler = this.pressHandler.bind(this)
+        this.deleteHandler = this.deleteHandler.bind(this)
     }
 
 
     async componentDidMount(){
         let recipes = await store.getItem('recipes')
         recipes = JSON.parse(recipes)
-        console.log(recipes)
         if (recipes) this.setState({ recipes })
     }
 
-    pressHandler(evt){
+    deleteHandler(){
         store.setItem('recipes', JSON.stringify({}))
         .then(this.setState({recipes: {}}))
     }
@@ -35,15 +34,22 @@ class Recipe extends React.Component {
                 </Text>
             <Button
             title="Delete"
-            onPress={this.pressHandler}
+            onPress={this.deleteHandler}
             />
             {
                 recipes.map(recipe => (
-                    <View>
-                    <Text>{recipe}</Text>
-                    </View>
+                    <Button
+                    key={ `${recipe}` }
+                    title={ `${recipe}` }
+                    onPress={() => console.log(`${recipe}`)}
+                    />
                 ))
             }
+            <Button
+            title={'new recipe'}
+            color='green'
+            onPress={() => console.log('new recipe button')}
+            />
             </View>
         )
     }

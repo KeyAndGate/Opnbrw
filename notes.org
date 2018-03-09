@@ -1,11 +1,23 @@
 * TODO core product
+** DONE home page
+   CLOSED: [2018-03-08 Thu 17:54]
 ** TODO add-recipe page
 *** DONE learn how routing works
     CLOSED: [2018-03-07 Wed 21:54]
 **** [[https://facebook.github.io/react-native/docs/navigation.html][link]]
-*** TODO learn how to store data
+*** DONE learn how to store data
+    CLOSED: [2018-03-08 Thu 17:54]
 **** Seems simple enough, [[https://facebook.github.io/react-native/docs/asyncstorage.html][link]]
+** TODO recipe page
+*** TODO info to display [0/4] 
+    - [ ] Name
+    - [ ] Ingredients
+    - [ ] Additions
+    - [ ] Schedule
+*** TODO add to active batches
+*** TODO edit button
 ** TODO recipes page
+** TODO active batches page
 * stretch goals
 ** settings page
 ** calendar view
