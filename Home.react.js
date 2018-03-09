@@ -1,24 +1,36 @@
 import React from 'react'
 import { Text, View, Button, AsyncStorage as store} from 'react-native'
 import styles from './Styles.react'
+import {
+    Scene,
+    Router,
+    Actions,
+    Reducer,
+    ActionConst,
+    Overlay,
+    Tabs,
+    Modal,
+    Drawer,
+    Stack,
+    Lightbox,
+} from 'react-native-router-flux'
 
 
-const HomeScreen = ( props ) => {
+const HomeScreen = () => {
     store.getItem('recipes')
          .then(recipes => {
              if (!recipes) store.setItem('recipes', JSON.stringify({}))
          })
-    const { navigate } = props.navigation
     return (
         <View style={styles.container}>
             <Text>Home Screen</Text>
             <Button
                 title="Go to Recipes"
-                onPress={() => navigate('Recipes')}
+                onPress={() => Actions.recipes()}
             />
             <Button
                 title="Go to NewRecipe"
-                onPress={() => navigate('NewRecipe')}
+                onPress={() => Actions.newRecipe()}
             />
         </View>
     )
