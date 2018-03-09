@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, AsyncStorage as store, Button } from 'react-native'
 import styles from './Styles.react'
+import {Scene, Router, Actions, Reducer, ActionConst, Overlay, Tabs, Modal, Drawer, Stack, Lightbox,} from 'react-native-router-flux' //eslint-disable-line
 
 /* let recipe = await store.getItem('MySpecial')*/
 
@@ -41,7 +42,7 @@ class Recipe extends React.Component {
                     <Button
                     key={ `${recipe}` }
                     title={ `${recipe}` }
-                    onPress={() => console.log(`${recipe}`)}
+                    onPress={() => Actions.recipe({ recipe, data: this.state.recipes[recipe]})}
                     />
                 ))
             }
