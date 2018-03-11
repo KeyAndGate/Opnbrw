@@ -4,7 +4,7 @@ import {Scene, Router, Actions, Reducer, ActionConst, Overlay, Tabs, Modal, Draw
 
 import Recipes from './Recipes.react'
 import Recipe from './Recipe.react'
-import NewRecipe from './NewRecipe.react'
+import NewRecipe from './NewRecipe'
 import HomeScreen from './Home.react'
 
 const App = () => {

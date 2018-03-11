@@ -1,6 +1,8 @@
 * TODO core product
 ** DONE home page
    CLOSED: [2018-03-08 Thu 17:54]
+** DONE recipes page
+   CLOSED: [2018-03-11 Sun 17:17]
 ** TODO add-recipe page
 *** DONE learn how routing works
     CLOSED: [2018-03-07 Wed 21:54]
@@ -8,6 +10,7 @@
 *** DONE learn how to store data
     CLOSED: [2018-03-08 Thu 17:54]
 **** Seems simple enough, [[https://facebook.github.io/react-native/docs/asyncstorage.html][link]]
+*** TODO a form for actually adding recipes
 ** TODO recipe page
 *** DONE info to display [5/5] 
     CLOSED: [2018-03-09 Fri 17:50]
@@ -18,8 +21,10 @@
     - [X] Schedule, regular
 *** TODO add to active batches
 *** TODO edit button
-** TODO recipes page
 ** TODO active batches page
+*** List active batches, link to them individually
+** TODO batch pages
+*** Name, when batch was started, checklist of steps that need to be done - Today, view of future steps - Upcoming
 * stretch goals
 ** settings page
 ** calendar view
