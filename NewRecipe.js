@@ -46,10 +46,10 @@ class NewRecipe extends React.Component {
     super(props)
     this.state = {
       name: 'enter name here',
-      start: 'starting ingredients: format as [ingredient] - [amount], ...',
-      additions: 'optional: additional ingredients: format as [ingredient] - [amount], ...',
-      steps: 'format as [step] - [day], ... where step is a name, and day is a number',
-      recurringSteps: 'format as [step] - [interval] - [starting date] - [ending date], ... where inteval is the number of days between repetitions'
+      start: 'starting ingredients: [ingredient] - [amount], ...',
+      additions: 'optional: additional ingredients:',
+      steps: '[step] - [day],... where step is a name, and day is a number',
+      recurringSteps: '[step] - [interval] - [starting date] - [ending date],... where inteval is the number of days between repetitions'
     }
   }
 
@@ -78,13 +78,32 @@ class NewRecipe extends React.Component {
     return out
   }
 
+  parseRecurring = (steps) => {
+    const arr = steps.split(',')
+    const out = []
+    arr.forEach(line => {
+      const stepAndDate = line.split(' - ')
+      const name = stepAndDate[0].trim()
+      const interval = stepAndDate[1].trim()
+      const start = stepAndDate[2].trim()
+      const end = stepAndDate[3].trim()
+      const quad = {name, interval, start, end}
+      out.push(quad)
+    })
+    return out
+  }
+
   pressHandler = () => {
     const recipe = {}
     const startingIngredients = this.parseIng(this.state.start)
+    const additions = this.parseIng(this.state.additions)
     const steps = this.parseSteps(this.state.steps)
+    const recurringSteps = this.parseRecurring(this.state.recurringSteps)
     recipe[this.state.name] = {
       startingIngredients,
-      steps
+      additions,
+      steps,
+      recurringSteps
     }
     store.mergeItem('recipes', JSON.stringify(recipe))
   }
