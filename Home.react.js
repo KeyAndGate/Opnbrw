@@ -28,10 +28,6 @@ const HomeScreen = () => {
                 title="Go to Recipes"
                 onPress={() => Actions.recipes()}
             />
-            <Button
-                title="Go to NewRecipe"
-                onPress={() => Actions.newRecipe()}
-            />
         </View>
     )
 }

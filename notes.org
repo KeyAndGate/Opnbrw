@@ -3,14 +3,16 @@
    CLOSED: [2018-03-08 Thu 17:54]
 ** DONE recipes page
    CLOSED: [2018-03-11 Sun 17:17]
-** TODO add-recipe page
+** DONE add-recipe page
+   CLOSED: [2018-03-11 Sun 19:49]
 *** DONE learn how routing works
     CLOSED: [2018-03-07 Wed 21:54]
 **** [[https://facebook.github.io/react-native/docs/navigation.html][link]]
 *** DONE learn how to store data
     CLOSED: [2018-03-08 Thu 17:54]
 **** Seems simple enough, [[https://facebook.github.io/react-native/docs/asyncstorage.html][link]]
-*** TODO a form for actually adding recipes
+*** DONE a form for actually adding recipes
+    CLOSED: [2018-03-11 Sun 19:49]
 ** TODO recipe page
 *** DONE info to display [5/5] 
     CLOSED: [2018-03-09 Fri 17:50]
@@ -26,5 +28,6 @@
 ** TODO batch pages
 *** Name, when batch was started, checklist of steps that need to be done - Today, view of future steps - Upcoming
 * stretch goals
+** rework recipe creation to be more user-friendly and step-by-step
 ** settings page
 ** calendar view

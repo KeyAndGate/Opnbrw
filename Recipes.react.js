@@ -47,9 +47,9 @@ class Recipe extends React.Component {
                 ))
             }
             <Button
-            title={'new recipe'}
-            color='green'
-            onPress={() => console.log('new recipe button')}
+              title="add a new recipe"
+              color="green"
+              onPress={() => Actions.newRecipe()}
             />
             </View>
         )
