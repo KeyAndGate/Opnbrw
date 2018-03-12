@@ -1,19 +1,7 @@
 import React from 'react'
 import { Text, View, Button, AsyncStorage as store} from 'react-native'
 import styles from './Styles.react'
-import {
-    Scene,
-    Router,
-    Actions,
-    Reducer,
-    ActionConst,
-    Overlay,
-    Tabs,
-    Modal,
-    Drawer,
-    Stack,
-    Lightbox,
-} from 'react-native-router-flux'
+import {Scene, Router, Actions, Reducer, ActionConst, Overlay, Tabs, Modal, Drawer, Stack, Lightbox,} from 'react-native-router-flux' //eslint-disable-line
 
 
 const HomeScreen = () => {
@@ -28,6 +16,13 @@ const HomeScreen = () => {
              store.setItem('batches', JSON.stringify({}))
            }
          })
+    store.getItem('notification time')
+        .then(time => {
+            if (!time) {
+                store.setItem('notification time',
+                              JSON.stringify({hour: 11, minute: 0}))
+            }
+        })
     return (
         <View style={styles.container}>
             <Text>Home Screen</Text>
