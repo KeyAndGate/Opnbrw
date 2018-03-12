@@ -23,6 +23,7 @@ class Batches extends React.Component {
       console.log(Object.keys(batches))
     return (
       <View style={styles.container}>
+        <Button title="clear batches" color="red" onPress={() => store.setItem('batches', JSON.stringify({}))} />
       {
         activeBatches.map(batch => (
             <Button
