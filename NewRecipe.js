@@ -3,43 +3,43 @@ import { View, Text, Button, TextInput, AsyncStorage as store } from 'react-nati
 import styles from './Styles.react'
 
 
-const step1 = {
-  name: 'secondary',
-  date: 13
-}
-const step2 = {
-  name: 'coldCrash',
-  date: 14
-}
-const step3 = {
-  name: 'bottle',
-  date: 18
-}
-const startingIngredients = {
-  Honey: '1 lb',
-  Blackberries: '1 cup'
-}
+// const step1 = {
+//   name: 'secondary',
+//   date: 13
+// }
+// const step2 = {
+//   name: 'coldCrash',
+//   date: 14
+// }
+// const step3 = {
+//   name: 'bottle',
+//   date: 18
+// }
+// const startingIngredients = {
+//   Honey: '1 lb',
+//   Blackberries: '1 cup'
+// }
 
-const SpecialRecipe = {
-  'The Good Stuff': {
-    startingIngredients,
-    steps: [step1, step2, step3],
-    recurringSteps: [{ name: 'degas', interval: 1, start: 2, end: 8 }]
-  }
-}
+// const SpecialRecipe = {
+//   'The Good Stuff': {
+//     startingIngredients,
+//     steps: [step1, step2, step3],
+//     recurringSteps: [{ name: 'degas', interval: 1, start: 2, end: 8 }]
+//   }
+// }
 
-const OtherRecipe = {
-  'The Other Stuff': {
-    startingIngredients,
-    steps: [step1, step2, step3],
-    additions: {Moarhoney: '2 lbs'}
-  }
-}
+// const OtherRecipe = {
+//   'The Other Stuff': {
+//     startingIngredients,
+//     steps: [step1, step2, step3],
+//     additions: {Moarhoney: '2 lbs'}
+//   }
+// }
 
-const otherpressHandler = () => {
-  let JSONED = JSON.stringify(SpecialRecipe)
-  store.mergeItem('recipes', JSONED)
-}
+// const otherpressHandler = () => {
+//   let JSONED = JSON.stringify(SpecialRecipe)
+//   store.mergeItem('recipes', JSONED)
+// }
 
 class NewRecipe extends React.Component {
   constructor(props){

@@ -5,6 +5,22 @@ import Ingredients from './Ingredients.react'
 import Steps from './Steps.react'
 import RecurringSteps from './RecurringSteps.react'
 
+const pressHandler = (name, start, additions, steps, recurringSteps) => {
+    const batch = {name, start, additions, steps, recurringSteps}
+    const out = {}
+    store.getItem('batchCount')
+        .then(countJSON => {
+            let count = JSON.parse(countJSON)
+            console.log(count)
+            out[count] = {...batch, active: true}
+            store.mergeItem('batches', JSON.stringify( out ))
+                .then(() => {
+                    count = count + 1
+                    store.setItem('batchCount', JSON.stringify( count ))
+                })
+        })
+}
+
 const Recipe = props => {
   const name = props.recipe
   const data = props.data
@@ -15,6 +31,10 @@ const Recipe = props => {
 
   return (
     <View style={styles.container}>
+      <Button
+        title="start a batch"
+        onPress={() => pressHandler(name, start, additions, steps, recurringSteps)}
+        />
       <Text>{name}</Text>
       <Ingredients type="Ingredients" ing={start} />
       {
@@ -27,5 +47,4 @@ const Recipe = props => {
     </View>
   )
 }
-
 export default Recipe

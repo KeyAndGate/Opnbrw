@@ -6,6 +6,7 @@ import Recipes from './Recipes.react'
 import Recipe from './Recipe.react'
 import NewRecipe from './NewRecipe'
 import HomeScreen from './Home.react'
+import Batches from './Batches'
 
 const App = () => {
         return (
@@ -15,6 +16,7 @@ const App = () => {
                     <Scene key="recipes" component={Recipes} title="Recipes" />
                     <Scene key="newRecipe" component={NewRecipe} title="New Recipe" />
                     <Scene key="recipe" component={Recipe} title="Recipe" />
+                    <Scene key="batches" component={Batches} title="Batches" />
                 </Stack>
             </Router>
         )

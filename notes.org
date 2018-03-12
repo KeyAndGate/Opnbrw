@@ -13,6 +13,10 @@
 **** Seems simple enough, [[https://facebook.github.io/react-native/docs/asyncstorage.html][link]]
 *** DONE a form for actually adding recipes
     CLOSED: [2018-03-11 Sun 19:49]
+** TODO batch pages
+*** Name, when batch was started, checklist of steps that need to be done - Today, view of future steps - Upcoming
+** TODO active batches page
+*** List active batches, link to them individually
 ** TODO recipe page
 *** DONE info to display [5/5] 
     CLOSED: [2018-03-09 Fri 17:50]
@@ -21,12 +25,9 @@
     - [X] Additions
     - [X] Schedule, recurrant
     - [X] Schedule, regular
-*** TODO add to active batches
+*** DONE add to active batches
+    CLOSED: [2018-03-11 Sun 23:50]
 *** TODO edit button
-** TODO active batches page
-*** List active batches, link to them individually
-** TODO batch pages
-*** Name, when batch was started, checklist of steps that need to be done - Today, view of future steps - Upcoming
 * stretch goals
 ** rework recipe creation to be more user-friendly and step-by-step
 ** settings page
