@@ -12,7 +12,13 @@ const pressHandler = (name, start, additions, steps, recurringSteps) => {
         .then(countJSON => {
             let count = JSON.parse(countJSON)
             console.log(count)
-            out[count] = {...batch, active: true}
+            let today = new Date()
+            today.setHours(0)
+            today.setMinutes(0)
+            today.setSeconds(0)
+            today.setMilliseconds(0)
+            today = today.getTime()
+            out[count] = {...batch, active: true, beginDate: today, id: count, notify: false }
             store.mergeItem('batches', JSON.stringify( out ))
                 .then(() => {
                     count = count + 1

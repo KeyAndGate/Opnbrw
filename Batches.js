@@ -28,7 +28,7 @@ class Batches extends React.Component {
             <Button
               key={batch}
              title={batches[batch].name + ' ' + batch}
-              onPress={() => console.log('hello')}
+              onPress={() => Actions.batch({batch: batches[batch]})}
                   />
         ))
       }
